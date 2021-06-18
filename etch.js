@@ -17,6 +17,8 @@ function gridCreate(n) {
         //append div variable to container variable
         sketchBox.appendChild(div.cloneNode(true))
     }
+
+    boxTransform();
 }
 
 
@@ -43,5 +45,5 @@ function boxTransform() {
 
 function newGrid() {
     //event listener on the button which callback function is gridCreate
-    document.querySelector('.new-game-btn').addEventListener('click', gridCreate);
+    document.querySelector('.new-game-btn').addEventListener('click', gridCreate(10));
 }
