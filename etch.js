@@ -22,8 +22,8 @@ function gridCreate(n) {
 function cssChange(n, sketchBox) {
     // create percentString variable = (1/n *100) + "% "
     let percentString = ((1/n)*100) + '% ';
-    //create variable cssString = string literal of (percentString * n)
-    let cssString = `${percentString * n}`;
+    //create variable cssString = multiply percentString by n
+    let cssString = percentString.repeat(n);
 
     //change css class "box" to contain value of cssString for grid-template-columns (style.gridTemplateColumns = "50px 50px 50px")
     sketchBox.style.gridTemplateColumns = cssString;
