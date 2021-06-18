@@ -10,3 +10,5 @@ An online Etch-a-Sketch!
 ## Features
 
 ## Learnings
+
+- Appending multiple copies of nodes with append child requires node.cloneNode(true).
