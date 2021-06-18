@@ -1,51 +1,42 @@
-//function: gridCreate (n) MAX n is 90 before crash.
+buttonListen();
+
+
 function gridCreate(n) {
-    //create a div variable
+//Function to clear and create a grid with an input of an integer (n) which determines the size of grid within sketchbox node.
     const div = document.createElement('div');
-    //create variable containg sketchbox
     const sketchBox = document.querySelector('.sketch-box');
 
-    //clear previous grid if already exits
     sketchBox.innerHTML = '';
-    //add 'box' class to div#
     div.classList.add('box');
-    //execute cssChange(n) 
     cssChange(n, sketchBox);
-
-    //For loop up to n**2 
     for (let i=0; i<(n**2); i++){
-        //append div variable to container variable
         sketchBox.appendChild(div.cloneNode(true))
-    }
-
+    };
     boxTransform();
 }
 
 
-//func: ccsChange(n) 
+
 function cssChange(n, sketchBox) {
-    // create percentString variable = (1/n *100) + "% "
+//Funtion to create a string which can be inserted as value into the style of sketchbox node.
     let percentString = ((1/n)*100) + '% ';
-    //create variable cssString = multiply percentString by n
     let cssString = percentString.repeat(n);
 
-    //change css class "box" to contain value of cssString for grid-template-columns (style.gridTemplateColumns = "50px 50px 50px")
     sketchBox.style.gridTemplateColumns = cssString;
 }
 
 
-//func: boxTransform()
 function boxTransform() {
-    //create a nodelist of all divs with box class
+//Function to allow a mouseover over a grid box to change the background color to black.
     let boxes = document.querySelectorAll('.box');
     
-    //use forEach method on nodelist with eventlistener on callback func with a further call back func changing the background to black
     boxes.forEach(box => box.addEventListener('mouseenter', () => box.style.backgroundColor = 'black'));
 }
 
-function newGrid() {
-    //event listener on the button which callback function is gridCreate
+function buttonListen() {
+//Function for allowing button to prompt user to create a new grid with thier input and filter that input.
     const newGridBtn = document.querySelector('.new-grid-btn'); 
+
     newGridBtn.addEventListener('click', () => {
         let userInput = parseInt(prompt('Please enter the number of rows/columns you wish to create a grid of (max 90):'));
         if (userInput < 91){
