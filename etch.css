@@ -17,5 +17,5 @@
 .box {
     height: auto;
     width: auto;
-    border: 2px black solid;
+    border: 0.1px black solid;
 }

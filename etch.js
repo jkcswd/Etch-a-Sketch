@@ -1,4 +1,4 @@
-//function: gridCreate (n)
+//function: gridCreate (n) MAX n is 90 before crash.
 function gridCreate(n) {
     //create a div variable
     const div = document.createElement('div');
@@ -28,6 +28,3 @@ function cssChange(n, sketchBox) {
     //change css class "box" to contain value of cssString for grid-template-columns (style.gridTemplateColumns = "50px 50px 50px")
     sketchBox.style.gridTemplateColumns = cssString;
 }
-
-
-//This does not change the style for box class
