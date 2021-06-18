@@ -46,5 +46,7 @@ function boxTransform() {
 function newGrid() {
     //event listener on the button which callback function is gridCreate
     const newGridBtn = document.querySelector('.new-grid-btn'); 
-    newGameBtn.addEventListener('click', () => gridCreate(10));
+    newGridBtn.addEventListener('click', () => {
+        gridCreate(parseInt(prompt('Please enter the number of rows and Columns you wish to create a grid of:')))
+    });
 }
