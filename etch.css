@@ -10,3 +10,9 @@
     grid-template-columns: auto;
     grid-template-rows: auto;
 }
+
+.box {
+    height: auto;
+    width: auto;
+    border: 2px black solid;
+}
