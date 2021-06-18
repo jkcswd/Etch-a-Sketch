@@ -28,3 +28,14 @@ function cssChange(n, sketchBox) {
     //change css class "box" to contain value of cssString for grid-template-columns (style.gridTemplateColumns = "50px 50px 50px")
     sketchBox.style.gridTemplateColumns = cssString;
 }
+
+
+//func: boxTransform()
+function boxTransform() {
+    //create a nodelist of all divs with box class
+    let boxes = document.querySelectorAll('box');
+    
+    //use forEach method on nodelist with eventlistener on callback func with a further call back func changing the background to black
+    boxes.forEach(box => box.addEventListener('mouseenter', () => box.style.backgroundColor = 'black'));
+}
+    
