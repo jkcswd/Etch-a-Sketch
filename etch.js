@@ -45,5 +45,6 @@ function boxTransform() {
 
 function newGrid() {
     //event listener on the button which callback function is gridCreate
-    document.querySelector('.new-game-btn').addEventListener('click', gridCreate(10));
+    const newGridBtn = document.querySelector('.new-grid-btn'); 
+    newGameBtn.addEventListener('click', () => gridCreate(10));
 }
