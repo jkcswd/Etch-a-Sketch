@@ -5,6 +5,8 @@ function gridCreate(n) {
     //create variable containg sketchbox
     const sketchBox = document.querySelector('.sketch-box');
 
+    //clear previous grid if already exits
+    sketchBox.innerHTML = '';
     //add 'box' class to div#
     div.classList.add('box');
     //execute cssChange(n) 
@@ -38,4 +40,8 @@ function boxTransform() {
     //use forEach method on nodelist with eventlistener on callback func with a further call back func changing the background to black
     boxes.forEach(box => box.addEventListener('mouseenter', () => box.style.backgroundColor = 'black'));
 }
-    
+
+function newGrid() {
+    //event listener on the button which callback function is gridCreate
+    document.querySelector('.new-game-btn').addEventListener('click', gridCreate);
+}
