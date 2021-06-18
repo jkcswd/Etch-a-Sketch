@@ -33,7 +33,7 @@ function cssChange(n, sketchBox) {
 //func: boxTransform()
 function boxTransform() {
     //create a nodelist of all divs with box class
-    let boxes = document.querySelectorAll('box');
+    let boxes = document.querySelectorAll('.box');
     
     //use forEach method on nodelist with eventlistener on callback func with a further call back func changing the background to black
     boxes.forEach(box => box.addEventListener('mouseenter', () => box.style.backgroundColor = 'black'));
