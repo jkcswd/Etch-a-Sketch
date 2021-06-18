@@ -11,9 +11,9 @@ function gridCreate(n) {
     cssChange(n, sketchBox);
 
     //For loop up to n**2 
-    for (let i=0; i>(n**2); i++){
+    for (let i=0; i<(n**2); i++){
         //append div variable to container variable
-        sketchBox.appendChild(div);
+        sketchBox.appendChild(div.cloneNode(true))
     }
 }
 
@@ -28,3 +28,6 @@ function cssChange(n, sketchBox) {
     //change css class "box" to contain value of cssString for grid-template-columns (style.gridTemplateColumns = "50px 50px 50px")
     sketchBox.style.gridTemplateColumns = cssString;
 }
+
+
+//This does not change the style for box class
