@@ -47,6 +47,11 @@ function newGrid() {
     //event listener on the button which callback function is gridCreate
     const newGridBtn = document.querySelector('.new-grid-btn'); 
     newGridBtn.addEventListener('click', () => {
-        gridCreate(parseInt(prompt('Please enter the number of rows and Columns you wish to create a grid of:')))
+        let userInput = parseInt(prompt('Please enter the number of rows/columns you wish to create a grid of (max 90):'));
+        if (userInput < 91){
+            gridCreate(userInput);
+        }else if (userInput > 90) {
+            alert('That number is too high! Please try again');
+        }else alert('That is not a valid input');
     });
 }
